@@ -1,9 +1,15 @@
-const bookList = document.querySelector('#book-list');
+var btns = document.querySelectorAll('#book-list .delete');
 
-console.log('book-list next sibling is:', bookList.nextSibling);
-console.log('book-list next sibling is:', bookList.nextElementSibling);
+Array.from(btns).forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        const li = event.target.parentElement;
+        
+        li.parentNode.removeChild(li);
+    });
+});
 
-console.log('book-list previous sibling is:', bookList.previousSibling);
-console.log('book-list previous sibling is:', bookList.previousElementSibling);
-
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br/> Too cool for everyone else!';
+const link = document.querySelector('#page-banner a');
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('navigation to ', event.target.textContent, ' was prevented.');
+})
