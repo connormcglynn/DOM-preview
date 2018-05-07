@@ -91,6 +91,7 @@ h1, h2{
     box-sizing: border-box;
     width: 300px;
     float: left;
+    clear: both;
 }
 
 #add-book button{
@@ -116,11 +117,11 @@ h1, h2{
 }
 
 #add-book #hide{
-    width: 30px;
+  width: 30px;
 }
 
 #add-book label{
-    line-height: 52px;
+  line-height: 52px;
 }
 
 /*
@@ -132,14 +133,12 @@ h1, h2{
     cursor: pointer;
     margin-right: 10px;
 }
-
 #tabbed-content .tab{
     display: none;
     border: 1px solid #ddd;
     padding: 0 10px;
     border-radius: 4px;
 }
-
 #tabbed-content .tab.active{
     display: block;
 }
